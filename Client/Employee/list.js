@@ -13,8 +13,8 @@ async function listAllEmployees(){
        <td>${employee.department_name}</td>
        <td>${employee.salary}</td>
         <td>
-          <button class="btn btn-sm btn-primary">Edit</button>
-          <button class="btn btn-sm btn-danger">Delete</button>
+          <a href="./edit-employee.html?id=${employee.employee_id}" class="btn btn-sm btn-primary">Edit</a>
+          <a class="btn btn-sm btn-danger">Delete</a>
         </td>`;
     });
 }
