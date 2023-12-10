@@ -7,13 +7,16 @@ const {
   getDeparmentByName,
   createDepartment,
   deleteDepartment,
+  updateDepartment
 } = require('../controllers/department')
 
 router.route('/')
   .get(getDepartments)
   .post(createDepartment)
 
-router.route('/:id').delete(deleteDepartment)
+router.route('/:id')
+      .delete(deleteDepartment)
+      .patch(updateDepartment)
 
 router.route('/id/:id').get(getDeparmentByID)
 router.route('/name/:name').get(getDeparmentByName)
