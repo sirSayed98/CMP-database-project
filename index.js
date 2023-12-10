@@ -2,9 +2,11 @@ require('colors')
 const express = require('express')
 const app = express()
 const connectDB = require('./config/db')
+const cors = require('cors')
 connectDB()
 // Body parser
 app.use(express.json())
+app.use(cors())
 
 // load Routers
 const departmentRoutes = require('./routes/department')

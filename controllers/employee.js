@@ -4,7 +4,18 @@ const asyncHandler = require('../middlewares/async')
 // @route     GET /api/v1/employees
 // @access    Public
 exports.getEmployees = asyncHandler(async (req, res, next) => {
-  const sql = 'select * from Employee'
+  const sql = `
+  SELECT
+    Employee.employee_id,
+    Employee.employee_name,
+    Department.department_name,
+    Employee.salary
+FROM
+    Employee
+JOIN
+    Department ON Employee.department_id = Department.department_id;
+
+  `
   const data = await global.db.query(sql)
   res.status(200).json({ data: data[0] })
 })
