@@ -4,7 +4,8 @@
   "description": "Use SQL with node",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "create-tables": "node create-tables.js"
   },
   "author": "Mohamed sayed",
   "license": "ISC",
