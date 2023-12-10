@@ -6,7 +6,6 @@ async function listAllEmployees() {
   // clear  tablebody
   employeeTableBody.innerHTML = ``
   data.forEach(employee => {
-    console.log(employee)
     const row = employeeTableBody.insertRow()
     row.innerHTML = `<td>${employee.employee_id}</td>
        <td>${employee.employee_name}</td>
