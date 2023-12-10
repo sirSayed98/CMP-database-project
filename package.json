@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "create-tables": "node create-tables.js",
-    "drop-tables": "node drop-tables.js"
+    "drop-tables": "node drop-tables.js",
+    "seed": "node seeding.js"
   },
   "author": "Mohamed sayed",
   "license": "ISC",
